@@ -6,8 +6,6 @@ void main() => runApp(new MyApp());
 const List<Key> keys = [
   Key("Network"),
   Key("NetworkDialog"),
-  Key("Flare"),
-  Key("FlareDialog"),
   Key("Asset"),
   Key("AssetDialog")
 ];
@@ -63,70 +61,6 @@ class MyHomePage extends StatelessWidget {
                             description: Text(
                               'This is a granny eating chocolate dialog box. This library helps you easily create fancy giffy dialog.',
                               textAlign: TextAlign.center,
-                            ),
-                            onOkButtonPressed: () {},
-                          ));
-                }),
-            RaisedButton(
-                key: keys[2],
-                color: Colors.teal,
-                child: Text(
-                  'Flare Giffy',
-                  style: TextStyle(
-                    color: Colors.white,
-                  ),
-                ),
-                onPressed: () {
-                  showDialog(
-                      context: context,
-                      builder: (_) => FlareGiffyDialog(
-                            key: keys[3],
-                            flarePath: 'assets/space_demo.flr',
-                            flareAnimation: 'loading',
-                            title: Text(
-                              'Space Reloading',
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                  fontSize: 22.0, fontWeight: FontWeight.w600),
-                            ),
-                            entryAnimation: EntryAnimation.DEFAULT,
-                            description: Text(
-                              'This is a space reloading dialog box. This library helps you easily create fancy flare dialog.',
-                              textAlign: TextAlign.center,
-                              style: TextStyle(),
-                            ),
-                            onOkButtonPressed: () {},
-                          ));
-                }),
-            RaisedButton(
-                key: keys[4],
-                color: Colors.teal,
-                child: Text(
-                  'Asset Giffy',
-                  style: TextStyle(
-                    color: Colors.white,
-                  ),
-                ),
-                onPressed: () {
-                  showDialog(
-                      context: context,
-                      builder: (_) => AssetGiffyDialog(
-                            key: keys[5],
-                            image: Image.asset(
-                              'assets/men_wearing_jacket.gif',
-                              fit: BoxFit.cover,
-                            ),
-                            title: Text(
-                              'Men Wearing Jackets',
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                  fontSize: 22.0, fontWeight: FontWeight.w600),
-                            ),
-                            entryAnimation: EntryAnimation.BOTTOM_RIGHT,
-                            description: Text(
-                              'This is a men wearing jackets dialog box. This library helps you easily create fancy giffy dialog.',
-                              textAlign: TextAlign.center,
-                              style: TextStyle(),
                             ),
                             onOkButtonPressed: () {},
                           ));
