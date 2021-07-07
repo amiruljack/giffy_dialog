@@ -6,6 +6,8 @@ void main() => runApp(new MyApp());
 const List<Key> keys = [
   Key("Network"),
   Key("NetworkDialog"),
+  Key("Flare"),
+  Key("FlareDialog"),
   Key("Asset"),
   Key("AssetDialog")
 ];
@@ -33,9 +35,11 @@ class MyHomePage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            RaisedButton(
+            ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  primary: Colors.teal,
+                ),
                 key: keys[0],
-                color: Colors.teal,
                 child: Text(
                   "Network Giffy",
                   style: TextStyle(
